@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "storage/",
+                "tracker/",
+                "client/",
+                "lib/libfastcommon/src",
+                "/usr/include/",
+                "/usr/local/include/",
+                "common/",
+                "lib/libfastcommon"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc",
+            "intelliSenseMode": "linux-gcc-x64"
+        }
+    ],
+    "version": 4
+}
