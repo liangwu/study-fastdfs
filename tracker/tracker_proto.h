@@ -121,6 +121,10 @@
 #define STORAGE_TRUNK_ALLOC_CONFIRM_REQ_BODY_LEN  (FDFS_GROUP_NAME_MAX_LEN \
 			+ sizeof(FDFSTrunkInfoBuff))
 
+/**
+ * @brief tracker请求/响应协议头部
+ * 
+ */
 typedef struct
 {
 	char pkg_len[FDFS_PROTO_PKG_LEN_SIZE];  //body length, not including header
@@ -301,9 +305,24 @@ int metadata_cmp_by_name(const void *p1, const void *p2);
 
 const char *get_storage_status_caption(const int status);
 
+/**
+ * @brief 接收并解析tracker协议头部
+ * 
+ * @param pTrackerServer tracker连接
+ * @param network_timeout 连接超时时间
+ * @param in_bytes tracker协议消息体长度
+ * @return int 响应状态
+ */
 int fdfs_recv_header_ex(ConnectionInfo *pTrackerServer,
         const int network_timeout, int64_t *in_bytes);
 
+/**
+ * @brief 接收并解析tracker协议头部，返回消息体长度
+ * 
+ * @param pTrackerServer tracker连接
+ * @param[out] in_bytes tracker协议消息体长度
+ * @return int 响应状态
+ */
 static inline int fdfs_recv_header(ConnectionInfo *pTrackerServer,
         int64_t *in_bytes)
 {
@@ -311,6 +330,15 @@ static inline int fdfs_recv_header(ConnectionInfo *pTrackerServer,
         SF_G_NETWORK_TIMEOUT, in_bytes);
 }
 
+/**
+ * @brief 接收tracker服务器的响应体数据
+ * 
+ * @param[in] pTrackerServer tracker连接
+ * @param[out] buff 缓冲区，接收响应数据
+ * @param[in] buff_size 缓冲区大小
+ * @param[out] in_bytes 响应数据字节长度
+ * 
+ */
 int fdfs_recv_response(ConnectionInfo *pTrackerServer, \
 		char **buff, const int buff_size, \
 		int64_t *in_bytes);

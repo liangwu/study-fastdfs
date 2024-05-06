@@ -196,6 +196,12 @@ static int tracker_rename_mark_files(const char *old_ip_addr, \
 	return result;
 }
 
+/**
+ * @brief 
+ * 
+ * @param arg 
+ * @return void* 
+ */
 static void *tracker_report_thread_entrance(void *arg)
 {
 	ConnectionInfo *conn;

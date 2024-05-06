@@ -2253,6 +2253,16 @@ bool storage_id_is_myself(const char *storage_id)
 	}
 }
 
+/**
+ * @brief storage服务器从tracker服务器获取ip
+ * 
+ * @details 向tracker发送“group_name”
+ * 
+ * @param conn tracker连接
+ * @param[out] ip_addrs ip地址
+ * @param buff_size 
+ * @return int 
+ */
 static int storage_get_my_ip_from_tracker(ConnectionInfo *conn,
         char *ip_addrs, const int buff_size)
 {

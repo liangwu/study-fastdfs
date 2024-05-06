@@ -8,10 +8,13 @@
                 "tracker/",
                 "client/",
                 "lib/libfastcommon/src",
+                "common/",
+                "lib/libfastcommon",
                 "/usr/include/",
                 "/usr/local/include/",
-                "common/",
-                "lib/libfastcommon"
+                "/usr/include/x86_64-linux-gnu/",
+                "/usr/include/x86_64-linux-gnu/**",
+                "/usr/include/x86_64-linux-gnu/c++/9/"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",

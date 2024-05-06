@@ -2,3 +2,7 @@
 	path = lib/libfastcommon
 	url = https://github.com/happyfish100/libfastcommon.git
 	branch = master
+[submodule "lib/libserverframe"]
+	path = lib/libserverframe
+	url = https://github.com/happyfish100/libserverframe.git
+	branch = master

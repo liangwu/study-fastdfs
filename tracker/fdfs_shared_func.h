@@ -127,6 +127,16 @@ static inline int fdfs_multi_ips_to_string(const FDFSMultiIP *ip_addrs,
     return fdfs_multi_ips_to_string_ex(ip_addrs, seperator, buff, buffSize);
 }
 
+/**
+ * @brief 解析tracker响应的ip地址
+ * 
+ * @param ip_str 
+ * @param[out] ip_addrs 
+ * @param error_info 
+ * @param error_size 
+ * @param resolve 
+ * @return int 
+ */
 int fdfs_parse_multi_ips_ex(char *ip_str, FDFSMultiIP *ip_addrs,
         char *error_info, const int error_size, const bool resolve);
 
