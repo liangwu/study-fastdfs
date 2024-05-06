@@ -1,0 +1,4 @@
+[submodule "lib/libfastcommon"]
+	path = lib/libfastcommon
+	url = https://github.com/happyfish100/libfastcommon.git
+	branch = master
